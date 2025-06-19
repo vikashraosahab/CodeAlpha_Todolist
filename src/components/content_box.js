@@ -5,8 +5,10 @@ import {Time} from '../date_time/get_time'
 const ContentBox = () => {
    let empty = true;
    let list = empty ? " " : Todo_container () 
-   let time = Time ()
-   console.log (time)
+   
+   setInterval (()=>{
+      document.getElementById ("current-time").textContent = Time ()
+   },1000)
     return `
         <div class="content-box">
            <div class = "content-box-header">
@@ -14,7 +16,7 @@ const ContentBox = () => {
               <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/nfc-logo.png" alt="nfc-logo"/>
               <span>Your Notes </span>
              </div>
-             <h3></h3>                                 
+             <h3 id = "current-time">${Time()}</h3>                                
            </div>
            <div class = "content-box-input">
             <h3>To Do List</h3>
