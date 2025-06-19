@@ -6,6 +6,7 @@
     box-sizing:border-box;
     font-family:'Times New Roman', Times, serif;
 }
+
 body {
     background-color:$background-color;
     color: $text-color;
@@ -107,6 +108,9 @@ body {
             padding:.5em;
             justify-content: space-around;
             align-items: center;
+        }
+        .strike {
+            text-decoration: overline;
         }
      }
    }
