@@ -90,10 +90,12 @@ body {
      overflow-y:auto;
      background-color:rgb(240, 235, 235);
      .container-box {
-        width:70%;
+        width:80%;
         height:120px;
-        margin:.3em auto;
-        background-color: rgb(196, 196, 196);
+        margin:.1em auto;
+        justify-content: center;
+        background-color: rgb(189, 44, 44);
+        align-items: center;
         overflow-y: auto;
         .day-heading {
             text-transform: uppercase;
@@ -106,12 +108,92 @@ body {
             display:flex;
             flex-direction: row;
             padding:.5em;
-            justify-content: space-around;
-            align-items: center;
+            justify-content: space-between;
+            .task-text {
+                width:80%;
+                padding-left:6px;
+                padding-right:6px;
+                color:grey;
+                font-size:30px;
+            }
         }
         .strike {
-            text-decoration: overline;
+            text-decoration: line-through;
+            color:gray;
         }
      }
    }
+}
+
+// Weekday section container
+.weekday-section {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5em 1em;
+}
+
+// Weekday heading
+.weekday-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1em;
+  letter-spacing: .1em;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding-bottom: .5em;
+}
+
+// Task list container for each day
+.weekday-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+// Individual task styling
+.clean-task-list {
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 1em 1.5em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s, background 0.2s;
+  border: 1px solid #ececec;
+  margin-bottom: 0.5em;
+}
+
+.clean-task-list:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: #f1f7ff;
+}
+
+// Task text
+.task-text {
+  flex: 1;
+  font-size: 1.1em;
+  color: #444;
+  margin-left: 1em;
+  word-break: break-word;
+}
+
+// Icon/button containers
+.check-btns, .task-delete, .task-edit {
+  cursor: pointer;
+  margin: 0 0.5em;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.task-delete:hover {
+  color: #e74c3c;
+}
+
+.task-edit:hover {
+  color: #2980b9;
 }
