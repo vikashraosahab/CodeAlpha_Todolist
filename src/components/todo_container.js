@@ -15,6 +15,7 @@ export const Todo_container = () => {
     if (tasksByWeekday[day].length === 0) return ""; // Skip days with no tasks
 
     let tasksHtml = tasksByWeekday[day].map((item, i) => {
+      let done = `${item['done'] ? `done` : ' '}`
       return `<div class="task-list clean-task-list">
         <div class="check-btns">
          ${item['done'] == false ? `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
@@ -23,7 +24,7 @@ export const Todo_container = () => {
   <path d="M20 6L9 17L4 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`}
         </div>
-        <div class="task-text">
+        <div class="task-text ${done}">
           ${item['tasks']}
         </div>
         <div class="task-delete">
