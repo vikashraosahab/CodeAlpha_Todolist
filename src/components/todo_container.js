@@ -17,9 +17,11 @@ export const Todo_container = () => {
     let tasksHtml = tasksByWeekday[day].map((item, i) => {
       return `<div class="task-list clean-task-list">
         <div class="check-btns">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+         ${item['done'] == false ? `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-          </svg>
+          </svg>` : `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 6L9 17L4 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`}
         </div>
         <div class="task-text">
           ${item['tasks']}

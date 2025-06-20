@@ -58,6 +58,11 @@ body {
   justify-content: space-between;
   position: relative;
 }
+.content-box .content-box-input .input-box:hover {
+  filter: drop-shadow(5px 8px 14px rgb(170, 169, 169));
+  color: white;
+  font-size: 33px;
+}
 .content-box .content-box-input .input-box input {
   position: absolute;
   left: 0%;
@@ -160,6 +165,9 @@ body {
   transition: box-shadow 0.2s, background 0.2s;
   border: 1px solid #ececec;
   margin-bottom: 0.5em;
+}
+.clean-task-list .done {
+  text-decoration: line-through;
 }
 
 .clean-task-list:hover {

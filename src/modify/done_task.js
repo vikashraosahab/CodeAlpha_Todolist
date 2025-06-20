@@ -1,3 +1,5 @@
+import database from "../database/database"
+import render from "../re-rendering/render"
 
 const doneTask = () =>{
    let done_btn = document.querySelectorAll (".check-btns")
@@ -5,11 +7,13 @@ const doneTask = () =>{
     btn.addEventListener ("click",()=>{
         let text = document.querySelectorAll(".task-text")[index]
              //   text.classList.add ("strike")
-                console.log ("hello world")
-                if (text.classList.contains("strike")) {
-                    text.classList.remove("strike")
-                }
-                else text.classList.add ("strike")
+             if (database[index]['done']) {
+                database[index]['done'] = false;
+             }
+             else {
+                database[index]['done'] = true
+             }
+            render ()
         })
    })
 }

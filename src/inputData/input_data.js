@@ -18,7 +18,8 @@ export const InputData = ()=>{
            day :new Date().getDay (),
            time : Time (),  
            tasks : task, 
-           weekday:day[new Date().getDay()]
+           weekday:day[new Date().getDay()],
+           done: false
        }
        database.push (obj)      
        render ()
