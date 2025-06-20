@@ -13,6 +13,7 @@ const doneTask = () =>{
              else {
                 database[index]['done'] = true
              }
+
             render ()
         })
    })
