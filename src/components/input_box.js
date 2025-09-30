@@ -5,7 +5,7 @@ export const InputBox = ()=>{
         <div class="input-field">
            <input type = "text" placeholder="ADD TASK TO THE TO-DO LIST" value ="" />
         </div>
-        <button> ADD </button>
+        <button> ADD Task </button>
       </div>
     `
 }
