@@ -18,7 +18,7 @@ const ContentBox = () => {
         <div class="content-box">
            <div class = "content-box-header">
              <div class="logo">
-              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/nfc-logo.png" alt="nfc-logo"/>
+              <img width="30" height="30" src="src/public/logo.png" alt="nfc-logo"/>
               <span>Your Notes </span>
              </div>
              <span id = "current-day"></span>
